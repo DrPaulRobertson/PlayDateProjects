@@ -1,0 +1,9 @@
+name=Crankopter
+author=Biscuit Syndicate
+description=Crank to fly, avoid the obstacles.
+bundleID=com.biscuitsyndicate.Crankopter
+version=1.0
+buildNumber=100
+imagePath=SystemAssets
+pdxversion=11000
+buildtime=704562074
