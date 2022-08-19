@@ -2,15 +2,19 @@
 -- Providing a singleton to access the manager and current scene.
 -- Functions for swapping scenes
 
--- class define
-Scene = {}
-Scene.__index = Scene
+--import "CoreLibs/object"
+--import "CoreLibs/graphics"
+--import "CoreLibs/sprites"
+--import "CoreLibs/timer"
 
--- Class declare
-function Scene:new()
-    local self = setmetatable({}, Scene)
-    -- any class variables
-    return self
+local pd <const> = playdate
+local gfx <const> = pd.graphics
+
+--class("Scene").extends(gfx.sprite)
+class("Scene").extends()
+
+function Scene:init()
+    -- default scene doens't do anything
 end
 
 function Scene:update() -- update logic for scene (may add input in separate function)
@@ -25,6 +29,6 @@ function Scene:load()   -- load all data and graphics for this scene
     error("load function missing")
 end
 
-function Scene.unload() --  unload anything the garage collector won't catch. graphics, font, etc
+function Scene:unload() --  unload anything the garage collector won't catch. graphics, font, etc
     error("unload function missing")
 end
